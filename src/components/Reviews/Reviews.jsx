@@ -20,7 +20,6 @@ const Reviews = () => {
         }
         getReviews();
     }, [movieId]);
-    console.log(reviews);
 
     return (
         <>
