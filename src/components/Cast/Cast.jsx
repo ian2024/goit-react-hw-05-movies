@@ -12,9 +12,9 @@ const Cast = () => {
     const [cast, setCast] = useState([]);
 
     useEffect(() => {
-        function getMoviesCast() {
+        async function getMoviesCast() {
             try {
-                const r = fetchMovieCast(movieId);
+                const r = await fetchMovieCast(movieId);
                 setCast(r);
             } catch (error) {
                 toast.error(error.message)

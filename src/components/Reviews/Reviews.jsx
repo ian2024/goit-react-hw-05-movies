@@ -9,10 +9,10 @@ const Reviews = () => {
     const { movieId } = useParams();
     const [reviews, setReviews] = useState([]);
 
-    useEffect(() => {
-        function getReviews() {
+    useEffect(() => { 
+        async function getReviews() {
             try {
-                const r = fetchReviews(movieId);
+                const r = await fetchReviews(movieId);
                 setReviews(r);
             } catch (error) {
                 toast.error(error.message)
@@ -20,6 +20,7 @@ const Reviews = () => {
         }
         getReviews();
     }, [movieId]);
+    console.log(reviews);
 
     return (
         <>
