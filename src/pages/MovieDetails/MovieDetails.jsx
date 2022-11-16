@@ -49,10 +49,10 @@ const MovieDetails = () => {
                         <Title>INFO Movie</Title>
                         <List>
                             <Item>
-                                <NavItem to='cast'>Cast</NavItem>
+                                <NavItem to='cast' state={{from: location.state.from}}>Cast</NavItem>
                             </Item>
                             <Item>
-                                <NavItem to='reviews'>Reviews</NavItem>
+                                <NavItem to='reviews' state={{from: location.state.from}}>Reviews</NavItem>
                             </Item>
                         </List>
                     </Block>
