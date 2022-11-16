@@ -1,5 +1,4 @@
 import { DEF_IMG, DEF_PATH } from 'defaultImages/defaultImages';
-import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router';
@@ -51,17 +50,6 @@ const Cast = () => {
             }
     </>    
     );
-};
-
-Cast.propTypes = {
-    cast: PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            profile_path: PropTypes.string.isRequired,
-            id: PropTypes.number.isRequired,
-            character: PropTypes.string.isRequired,
-        })
-    ),
 };
 
 export default Cast;

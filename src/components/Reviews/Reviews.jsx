@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { toast } from 'react-toastify';
@@ -39,16 +38,6 @@ const Reviews = () => {
             )}
         </>
     );
-};
-
-Reviews.propTypes = {
-    reviews: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            author: PropTypes.string.isRequired,
-            content: PropTypes.string.isRequired,
-        })
-    ),
 };
 
 export default Reviews;
